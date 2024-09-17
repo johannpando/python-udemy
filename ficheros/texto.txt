@@ -1,0 +1,8 @@
+Hola, ¿qué tal?
+
+Nada
+
+Adiós
+
+Hola nuevamente,
+No he dejado espacios entre líneas
