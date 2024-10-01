@@ -1,4 +1,4 @@
-from cv2 import cv2
+import cv2
 import face_recognition as fr
 import os
 import numpy
@@ -24,11 +24,11 @@ def codificar(imagenes):
     lista_codificada = []
 
     # pasar todas las imagenes a rgb
-    for imagen in imagenes:
-        imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
+    for imagen_p in imagenes:
+        imagen_p = cv2.cvtColor(imagen_p, cv2.COLOR_BGR2RGB)
 
         # codificar
-        codificado = fr.face_encodings(imagen)[0]
+        codificado = fr.face_encodings(imagen_p)[0]
 
         # agregar a la lista
         lista_codificada.append(codificado)
@@ -59,6 +59,8 @@ captura = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 # leer imagen de la camara
 exito, imagen = captura.read()
+
+print(captura)
 
 if not exito:
     print("No se ha podido tomar la captura")
