@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base/principal.html' %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar una tarea</title>
+</head>
+<body>
+    <div class="barra-superior">
+        <a href="{% url 'tareas' %}">&#x2B05; Volver</a>
+    </div>
+    <div class="cuerpo-tarjeta">
+        <form method="POST">
+            {% csrf_token %}
+            <p>Se va a proceder a eliminar la tarea: "{{tarea}}"</p>
+            <input class="boton"  type="submit" value="Eliminar Tarea">
+        </form>
+    <div
+</body>
+</html>
+{% endblock content %}

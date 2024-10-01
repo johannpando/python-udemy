@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+{% extends 'base/principal.html' %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso de usuario</title>
+</head>
+<body>
+    <div class="barra-superior">
+        <h1>Inicio de sesión</h1>
+    </div>
+    <div class="cuerpo-tarjeta">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="boton" type="submit" value="Iniciar sesión">
+        </form>
+        <p>Si no tienes una cuenta puedes crearla en este <a href="{% url 'registro' %}">enlace</a></p>
+    </div>
+</body>
+</html>
+{% endblock content %}
